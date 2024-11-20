@@ -18,14 +18,14 @@ public class Main {
 
 
         System.out.println("\nRestaurando estado salvo...");
-        player.undo();
+        player.restore();
 
 
         System.out.println("\nContinuando o jogo...");
         player.goForward();
 
         System.out.println("\nTentando restaurar mais uma vez...");
-        player.undo();
+        player.restore();
 
         System.out.println("\nJogo finalizado.");
     }
