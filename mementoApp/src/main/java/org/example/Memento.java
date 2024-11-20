@@ -1,7 +1,7 @@
 package org.example;
 
 class Memento {
-    private final int state; // (posição da peça)
+    private final int state;
 
     public Memento(int state) {
         this.state = state;

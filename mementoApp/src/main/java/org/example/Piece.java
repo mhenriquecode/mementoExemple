@@ -13,8 +13,8 @@ class Piece { // Originator
         return new Memento(cell);
     }
 
-    public void restoreState(Memento memento) { // setMemento
-        this.cell = memento.getState(); // Restaura o estado do Memento
+    public void restoreState(Memento memento) {
+        this.cell = memento.getState();
         System.out.println("Estado restaurado para a posição: " + cell);
     }
 
