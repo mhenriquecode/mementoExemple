@@ -1,5 +1,3 @@
-package org.example;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -19,7 +17,7 @@ class Player { // Caretaker
         System.out.println("Estado salvo com sucesso!");
     }
 
-    public void undo() {
+    public void restore() {
         if (!positionMemory.isEmpty()) {
             Memento lastMemento = positionMemory.removeLast();
             piece.restoreState(lastMemento);

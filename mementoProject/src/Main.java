@@ -1,5 +1,3 @@
-package org.example;
-
 public class Main {
     public static void main(String[] args) {
         // Criação do Caretaker
@@ -14,25 +12,18 @@ public class Main {
 
         player.goForward();
         player.goForward();
-
-        System.out.println("\nSalvando estado...");
-        player.saveState();
         player.goForward();
 
 
         System.out.println("\nRestaurando estado salvo...");
-        player.undo();
+        player.restore();
 
 
         System.out.println("\nContinuando o jogo...");
         player.goForward();
 
-
-        System.out.println("\nRestaurando mais uma vez...");
-        player.undo();
-
         System.out.println("\nTentando restaurar mais uma vez...");
-        player.undo();
+        player.restore();
 
         System.out.println("\nJogo finalizado.");
     }
