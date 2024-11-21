@@ -17,5 +17,4 @@ class Piece { // Originator
         this.cell = memento.getState();
         System.out.println("Estado restaurado para a posição: " + cell);
     }
-
 }

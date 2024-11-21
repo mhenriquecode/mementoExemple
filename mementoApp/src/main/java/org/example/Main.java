@@ -2,7 +2,6 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Criação do Caretaker
         Player player = new Player();
 
         System.out.println("Realizando movimentos...");
@@ -21,7 +20,7 @@ public class Main {
 
 
         System.out.println("\nRestaurando estado salvo...");
-        player.undo();
+        player.checkPoint();
 
 
         System.out.println("\nContinuando o jogo...");
@@ -29,10 +28,10 @@ public class Main {
 
 
         System.out.println("\nRestaurando mais uma vez...");
-        player.undo();
+        player.checkPoint();
 
         System.out.println("\nTentando restaurar mais uma vez...");
-        player.undo();
+        player.checkPoint();
 
         System.out.println("\nJogo finalizado.");
     }
