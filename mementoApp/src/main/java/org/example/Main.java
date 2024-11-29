@@ -7,17 +7,18 @@ public class Main {
         System.out.println("Realizando movimentos...");
         player.goForward();
         player.goForward();
+        player.goBack();
 
         System.out.println("\nSalvando estado...");
         player.saveState();
 
         player.goForward();
         player.goForward();
+        player.goBack();
 
         System.out.println("\nSalvando estado...");
         player.saveState();
         player.goForward();
-
 
         System.out.println("\nRestaurando estado salvo...");
         player.checkPoint();

@@ -1,12 +1,10 @@
 package org.example;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
+import java.util.Stack;
 
 
 class Player { // Caretaker
-    private final List<Memento> positionMemory = new ArrayList<>();
+    private final Stack<Memento> positionMemory = new Stack<>();
     private final Piece piece = new Piece();
 
     public void goForward() {
@@ -14,14 +12,19 @@ class Player { // Caretaker
         piece.move(n);
     }
 
+    public void goBack(){
+        int n = -1 * (new Random().nextInt(6) + 1);
+        piece.move(n);
+    }
+
     public void saveState() {
-        positionMemory.add(piece.createMemento());
+        positionMemory.push(piece.createMemento());
         System.out.println("Estado salvo com sucesso!");
     }
 
     public void checkPoint() {
         if (!positionMemory.isEmpty()) {
-            Memento lastMemento = positionMemory.removeLast();
+            Memento lastMemento = positionMemory.pop();
             piece.restoreState(lastMemento);
         } else {
             System.out.println("Nenhum estado para restaurar.");

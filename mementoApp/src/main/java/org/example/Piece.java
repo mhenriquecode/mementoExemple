@@ -5,6 +5,9 @@ class Piece { // Originator
 
     public void move(int n) {
         cell += n;
+        if(cell < 0){
+            cell = 0;
+        }
         System.out.println("Movendo para a posição: " + cell);
     }
 
